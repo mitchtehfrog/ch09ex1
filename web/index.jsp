@@ -9,7 +9,7 @@
 <body>
 
 <h1>List of albums</h1>
-<c:if test="${cookie.firstNameCookie.value} != null}">
+<c:if test="${cookie.firstNameCookie.value ne null}">
 <p>Welcome back, ${cookie.firstNameCookie.value}</p>
 </c:if>
 <p>
