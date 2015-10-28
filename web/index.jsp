@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
     <meta charset="utf-8">
     <title>Murach's Java Servlets and JSP</title>
     <link rel="stylesheet" href="styles/main.css" type="text/css"/>
@@ -8,9 +9,9 @@
 <body>
 
 <h1>List of albums</h1>
-
+<c:if test="${cookie.firstNameCookie.value} != null}">
 <p>Welcome back, ${cookie.firstNameCookie.value}</p>
-
+</c:if>
 <p>
 <a href="download?action=checkUser&amp;productCode=8601">
     86 (the band) - True Life Songs and Pictures
