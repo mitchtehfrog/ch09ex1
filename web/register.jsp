@@ -1,6 +1,8 @@
+
 <!DOCTYPE html>
 <html>
 <head>
+    <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
     <meta charset="utf-8">
     <title>Murach's Java Servlets and JSP</title>
     <link rel="stylesheet" href="styles/main.css" type="text/css"/>
@@ -15,11 +17,11 @@
 <form action="download" method="post">
     <input type="hidden" name="action" value="registerUser">        
     <label class="pad_top">Email:</label>
-    <input type="email" name="email" value="${user.email}"><br>
+    <input type="email" name="email" value="<c:out value="${user.email}" /> "<br>
     <label class="pad_top">First Name:</label>
-    <input type="text" name="firstName" value="${user.firstName}"><br>
+    <input type="text" name="firstName" value="<c:out value="${user.firstName}" /> "<br>
     <label class="pad_top">Last Name:</label>
-    <input type="text" name="lastName" value="${user.lastName}"><br>        
+    <input type="text" name="lastName" value="<c:out value="${user.email}" /> "<br>        
     <label>&nbsp;</label>
     <input type="submit" value="Register" class="margin_left">
 </form>
